@@ -1,17 +1,16 @@
 # nodeJS <img src="https://www.lomasnuevo.net/wp-contentupl/2018/04/Nodejs.png" alt="Node.js anuncia la primera versión en su línea 10.x Nodejs noticias, desarrollo" style="zoom:10%;" />
 
-#Pasos iniciales
+# Pasos iniciales
 
 Creamos un directorio, iniciamos el proyecto con el editor de código (*[Visual Studio Code](https://code.visualstudio.com/)*) :
 
-~~~sh
+
 ```sh
 mkdir "nombredirectorio"
 code .
 ```
-~~~
 
-#Creación *package.json*
+# Creación *package.json*
 
 Creamos el archivo **package.json** con el comando siguiente con la opción -y (responde "sí" a todas las preguntas):
 
@@ -24,7 +23,7 @@ Abrimos terminal (Ctrl + shift +`)
 npm init -y
 ```
 
-#Instalamos **[Express](https://expressjs.com/es/)**
+# Instalamos **[Express](https://expressjs.com/es/)**
 
 * *Express* es una infraestructura de aplicaciones web Node.js mínima y flexible
 
@@ -47,14 +46,14 @@ code .gitignore
 
 Añadimos *node_modules* la gitignore, debido a que es un archivo pesado, para evitar subirlo al repositorio
 
-#Creamos index.js
+# Creamos index.js
 
 ```sh
 touch index.js
 code index.js 
 ```
 
-#Instalamos **[esm](https://www.npmjs.com/package/esm)**
+# Instalamos **[esm](https://www.npmjs.com/package/esm)**
 
 Es un cargador de módulos.
 
@@ -62,7 +61,7 @@ Es un cargador de módulos.
 npm install esm
 ```
 
-#Compilamos index.js
+# Compilamos index.js
 
 ```sh
 node -r esm index.js
@@ -80,7 +79,7 @@ Desde terminal ya podemos `usar npm start`
 
 Si hacemos un clone del repositorio, debemos usar `npm i`
 
-#Probando código
+# Probando código
 
 ```sh
 http :3500
@@ -89,3 +88,17 @@ http post :3000
 http get :3000
 ```
 
+# Sincronizando con git
+
+Primer commit y creación del repositorio a través de  `gh`
+
+```sh
+git init
+git config user.name "Your Name"
+git config user.email "youremail@yourdomain.com"
+git add .
+git commit -m "First commit"
+gh repo create
+git push origin master
+gh repo view --web
+```
